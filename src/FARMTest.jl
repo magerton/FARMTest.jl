@@ -2,6 +2,8 @@ module FARMTest
 
 using Distributed, SlurmClusterManager, Dates
 
+export println_time_flush
+
 "workers() but excluding master"
 getworkers() = filter(i -> i != 1, workers())
 

@@ -17,11 +17,11 @@
 # Resource allocation
 #-----------------------
 
-#SBATCH --time=4-06:00:00     # in d-hh:mm:ss
+#SBATCH --time=0-01:00:00     # in d-hh:mm:ss
 #SBATCH --nodes=1
-#SBATCH --ntasks=64
+#SBATCH --ntasks=4
 #SBATCH --partition=high2
-#SBATCH --mem=256000      # max out RAM
+#SBATCH --mem=6000
 
 #-----------------------
 # script
