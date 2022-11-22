@@ -19,8 +19,8 @@
 
 #SBATCH --time=0-01:00:00     # in d-hh:mm:ss
 ##SBATCH --nodes=2
-#SBATCH --ntasks=256
-##SBATCH --cpus-per-task=128
+## SBATCH --ntasks=256
+# SBATCH --cpus-per-task=256
 #SBATCH --partition=high2
 #SBATCH --mem=512000
 
