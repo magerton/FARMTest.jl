@@ -4,8 +4,13 @@ using Distributed, SlurmClusterManager
 
 @testset "FARMTest.jl" begin
     
+    if "SLURM_JOBID" in keys(ENV)
+        np = parse(Int, ENV["SLURM_NTASKS"])
+    else
+        np = Sys.CPU_THREADS
+    end
     println_time_flush("regular addprocs")
-    pids0 = addprocs()
+    pids0 = addprocs(np)
     @everywhere println("hello from $(myid()):$(gethostname())")
     rmprocs(pids0)
 
