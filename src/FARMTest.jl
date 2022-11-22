@@ -15,7 +15,7 @@ function start_up_workers(ENV::Base.EnvDict; nprocs = Sys.CPU_THREADS)
     flush(stdout)
     
     if "SLURM_JOBID" in keys(ENV)
-        num_cpus_to_request = parse(Int, ENV["SLURM_TASKS_PER_NODE"])
+        num_cpus_to_request = parse(Int, ENV["SLURM_NTASKS"])
         println_time_flush("requesting $(num_cpus_to_request) cpus from slurm.")
         pids = addprocs(SlurmManager(; verbose=true))
     else
