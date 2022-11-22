@@ -20,11 +20,13 @@
 #-----------------------
 
 #SBATCH --time=0-01:00:00     # in d-hh:mm:ss
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=256
+#SBATCH --ntasks=256
 #SBATCH --partition=high2
-#SBATCH --mem=512000
+#SBATCH --mem=768000
+
+##SBATCH --nodes=1
+##SBATCH --cpus-per-task=256
+
 
 # https://researchcomputing.princeton.edu/support/knowledge-base/julia
 
