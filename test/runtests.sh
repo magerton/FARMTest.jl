@@ -10,19 +10,21 @@
 #SBATCH --mail-user=mjagerton@ucdavis.edu
 #SBATCH --mail-type=ALL
 
+# NOT USED
+# --------------
 ##SBATCH --output out-%j.output
-##SBATCH --error out-%j.output
+##SBATCH --error  out-%j.output
 
 #-----------------------
 # Resource allocation
 #-----------------------
 
 #SBATCH --time=0-01:00:00     # in d-hh:mm:ss
-#SBATCH --nodes=2
-#SBATCH --ntasks=2
-#SBATCH --cpus-per-task=128
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=256
 #SBATCH --partition=high2
-#SBATCH --mem=750000
+#SBATCH --mem=512000
 
 # https://researchcomputing.princeton.edu/support/knowledge-base/julia
 
