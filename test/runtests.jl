@@ -7,8 +7,10 @@ using Distributed, SlurmClusterManager
     # SLURM only startup
     if "SLURM_JOBID" in keys(ENV)
         println_time_flush("\n\nslurm addprocs")
-        pids1 = addprocs(SlurmManager(; verbose=true))
-        @everywhere println("hello from $(myid()):$(gethostname())")
+        pids1 = addprocs(SlurmManager(; verbose=true); exeflags = "--project=$(Base.active_project())")
+        # @everywhere println("hello from $(myid()):$(gethostname())")
+        @everywhere using FARMTest
+        @everywhere FARMTest.hellostring()    
         println_time_flush("removing procs $pids1\n\n")
         rmprocs(pids1)
     end
@@ -16,7 +18,9 @@ using Distributed, SlurmClusterManager
     # using FARMTest
     println_time_flush("\n\nstartup workers")
     pids2 = FARMTest.start_up_workers(ENV)
-    @everywhere println("hello again from $(myid()):$(gethostname())")
+    # @everywhere println("hello again from $(myid()):$(gethostname())")
+    @everywhere using FARMTest
+    @everywhere FARMTest.hellostring()
     println_time_flush("removing procs $pids2")
     rmprocs(pids2)
 

@@ -17,11 +17,11 @@ function start_up_workers(ENV::Base.EnvDict; nprocs = Sys.CPU_THREADS)
     if "SLURM_JOBID" in keys(ENV)
         num_cpus_to_request = parse(Int, ENV["SLURM_NTASKS"])
         println_time_flush("requesting $(num_cpus_to_request) cpus from slurm.")
-        pids = addprocs(SlurmManager(; verbose=true))
+        pids = addprocs(SlurmManager(; verbose=true); exeflags = "--project=$(Base.active_project())")
     else
         cputhrds = Sys.CPU_THREADS
         cputhrds < nprocs && @warn "using nprocs = $cputhrds < $nprocs specified"
-        pids = addprocs(min(nprocs, cputhrds))
+        pids = addprocs(min(nprocs, cputhrds); exeflags = "--project=$(Base.active_project())")
     end
     println_time_flush("Workers added: $pids")
     return pids
@@ -31,5 +31,8 @@ function println_time_flush(str)
     println(Dates.format(now(), "HH:MM:SS   ") * str)
     flush(stdout)
 end
+
+hellostring() = "hello from $(myid()):$(gethostname())"
+
 
 end
