@@ -22,19 +22,15 @@
 #SBATCH --time=0-01:00:00     # in d-hh:mm:ss
 #SBATCH --ntasks=4
 #SBATCH --partition=high2
-#SBATCH --mem=2000
+#SBATCH --mem=64000      # max out RAM
 
 ##SBATCH --nodes=1
-##SBATCH --cpus-per-task=256
-
 
 # https://researchcomputing.princeton.edu/support/knowledge-base/julia
 
 #-----------------------
 # script
 #-----------------------
-
-# cd ~/testjobs
 
 echo ""
 hostname
@@ -48,6 +44,7 @@ MON=$(date +"%Y-%m")
 # switch into directory
 mkdir ${MON}/${SLURM_JOB_ID}
 cd    ${MON}/${SLURM_JOB_ID}
+pwd
 echo ""
 echo "Starting job!!! ${SLURM_JOB_ID} on partition ${SLURM_JOB_PARTITION}"
 echo ""
