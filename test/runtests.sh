@@ -20,9 +20,9 @@
 #-----------------------
 
 #SBATCH --time=0-01:00:00     # in d-hh:mm:ss
-#SBATCH --ntasks=256
+#SBATCH --ntasks=4
 #SBATCH --partition=high2
-#SBATCH --mem=512000
+#SBATCH --mem=2000
 
 ##SBATCH --nodes=1
 ##SBATCH --cpus-per-task=256
