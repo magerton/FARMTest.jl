@@ -34,7 +34,7 @@
 # script
 #-----------------------
 
-cd ~/testjobs
+# cd ~/testjobs
 
 echo ""
 hostname
