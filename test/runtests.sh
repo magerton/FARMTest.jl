@@ -20,9 +20,9 @@
 #-----------------------
 
 #SBATCH --time=0-01:00:00     # in d-hh:mm:ss
-#SBATCH --ntasks=128
+#SBATCH --ntasks=64
 #SBATCH --partition=high2
-#SBATCH --mem=256000      # max out RAM
+#SBATCH --mem=64000      # max out RAM
 
 ##SBATCH --nodes=1
 
