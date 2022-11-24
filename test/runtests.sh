@@ -22,7 +22,7 @@
 #SBATCH --time=0-01:00:00     # in d-hh:mm:ss
 #SBATCH --ntasks=64
 #SBATCH --partition=high2
-#SBATCH --mem=64000      # max out RAM
+#SBATCH --mem=256000      # max out RAM
 
 ##SBATCH --nodes=1
 
@@ -53,7 +53,7 @@ echo "FARMTest commit " $(git -C ~/dev-pkgs/FARMTest/ rev-parse HEAD)
 # echo "haynesville             commit " $(git -C ~/haynesville/ rev-parse HEAD)
 echo ""
 # print out environment variables
-julia -e '[println((k,ENV[k],)) for k in keys(ENV) if occursin("SLURM_NTASKS",k)];'
+julia -e '[println((k,ENV[k],)) for k in keys(ENV) if occursin(r"SLURM",k)];'
 
 # run the script
 julia --project=~/dev-pkgs/FARMTest --optimize=3 ~/dev-pkgs/FARMTest/test/runtests.jl
