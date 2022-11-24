@@ -9,10 +9,10 @@ using Distributed, SlurmClusterManager
     # SLURM only startup
     if "SLURM_JOBID" in keys(ENV)
         println_time_flush("\n\nslurm addprocs")
-        pids1 = addprocs(SlurmManager(; verbose=true))
+        pids1 = addprocs(SlurmManager(; verbose=true); exeflags = "--project=$(Base.active_project())", topology=:master_worker)
         @everywhere begin
-            using Pkg
-            @eval Pkg.activate($PROJPATH)  # required
+            # using Pkg
+            # @eval Pkg.activate($PROJPATH)  # required
             using FARMTest
             println(FARMTest.hellostring())
         end      
@@ -24,8 +24,8 @@ using Distributed, SlurmClusterManager
     println_time_flush("\n\nstartup workers")
     pids2 = FARMTest.start_up_workers(ENV)
     @everywhere begin
-        using Pkg
-        @eval Pkg.activate($PROJPATH)  # required
+        # using Pkg
+        # @eval Pkg.activate($PROJPATH)  # required
         using FARMTest
         println(FARMTest.hellostring())
     end
