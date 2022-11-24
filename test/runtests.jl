@@ -15,8 +15,8 @@ using Distributed, SlurmClusterManager
             using Pkg
             @eval Pkg.activate($PROJPATH)  # required
             using FARMTest
-            FARMTest.hellostring()
         end      
+        @everywhere FARMTest.hellostring()
         println_time_flush("removing procs $pids1\n\n")
         rmprocs(pids1)
     end
@@ -29,8 +29,8 @@ using Distributed, SlurmClusterManager
         using Pkg
         @eval Pkg.activate($PROJPATH)  # required
         using FARMTest
-        FARMTest.hellostring()
     end
+    @everywhere FARMTest.hellostring()
     println_time_flush("removing procs $pids2")
     rmprocs(pids2)
 
