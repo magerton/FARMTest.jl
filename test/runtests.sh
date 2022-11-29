@@ -15,9 +15,9 @@
 #-----------------------
 
 #SBATCH --time=0-01:00:00     # in d-hh:mm:ss
-#SBATCH --ntasks=3
+#SBATCH --ntasks=200
 #SBATCH --partition=high2
-#SBATCH --mem=6000
+#SBATCH --mem=300000
 #SBATCH --nodes=2
 
 # https://researchcomputing.princeton.edu/support/knowledge-base/julia
