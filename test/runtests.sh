@@ -29,11 +29,8 @@
 
 # https://researchcomputing.princeton.edu/support/knowledge-base/julia
 
-HOSTS=.hosts-job$SLURM_JOB_ID
-HOSTFILE=.hostlist-job$SLURM_JOB_ID
-srun hostname -f > $HOSTS
-sort $HOSTS | uniq -c | awk '{print $2 ":" $1}' >> $HOSTFILE
-
+HOSTFILE=$SLURM_SUBMIT_DIR/hostfile-$SLURM_JOBID
+scontrol show hostnames > $HOSTFILE
 cat $HOSTFILE
 
 #-----------------------
