@@ -1,0 +1,2202 @@
+==========================================
+SLURM_JOB_ID = 56253229
+SLURM_NODELIST = c4-91
+==========================================
+Initialising new SSH agent...
+Enter passphrase for /home/magerton/.ssh/id_rsa: 
+c4-91
+Module julia/1.8.2 loaded 
+
+Directory 2022-11 exists
+/home/magerton/rewrite/2022-11/56253229
+
+Starting job!!! 56253229 on partition high2
+
+FARMTest commit  d2666cc40bd901d197d62d9a4c345ec4454a8497
+
+("SLURM_NODEID", "0")
+("SLURM_TASK_PID", "214772")
+("SLURM_PRIO_PROCESS", "0")
+("SLURM_SUBMIT_DIR", "/home/magerton/rewrite")
+("SLURM_PROCID", "0")
+("SLURM_JOB_GID", "1522729")
+("SLURMD_NODENAME", "c4-91")
+("SLURM_TASKS_PER_NODE", "86")
+("SLURM_NNODES", "1")
+("SLURM_JOB_NODELIST", "c4-91")
+("SLURM_CLUSTER_NAME", "farm")
+("SLURM_NODELIST", "c4-91")
+("SLURM_NTASKS", "86")
+("SLURM_JOB_CPUS_PER_NODE", "86")
+("SLURM_TOPOLOGY_ADDR", "c4-91")
+("SLURM_WORKING_CLUSTER", "farm:192.168.12.90:6817:9728:101")
+("SLURM_JOB_NAME", "Testing_FARMTest_package")
+("SLURM_JOBID", "56253229")
+("SLURM_CONF", "/share/apps/slurm-current/18.04/etc/slurm.conf")
+("SLURM_NODE_ALIASES", "(null)")
+("SLURM_JOB_QOS", "magertongrph2")
+("SLURM_TOPOLOGY_ADDR_PATTERN", "node")
+("SLURM_CPUS_ON_NODE", "86")
+("SLURM_JOB_NUM_NODES", "1")
+("SLURM_MEM_PER_NODE", "256000")
+("SLURM_JOB_UID", "1522729")
+("SLURM_JOB_PARTITION", "high2")
+("SLURM_SCRIPT_CONTEXT", "prolog_task")
+("SLURM_JOB_USER", "magerton")
+("SLURM_NPROCS", "86")
+("SLURM_SUBMIT_HOST", "farm.cse.ucdavis.edu")
+("SLURM_JOB_ACCOUNT", "magertongrp")
+("SLURM_HOME", "/share/apps/slurm-22.05.4/18.04")
+("SLURM_GTIDS", "0")
+("SLURM_JOB_ID", "56253229")
+("SLURM_LOCALID", "0")
+21:25:31   
+
+slurm addprocs
+srun: error: c4-91: task 23: Exited with exit code 1
+srun: error: c4-91: tasks 46,68,78: Exited with exit code 1
+srun: error: c4-91: task 49: Exited with exit code 1
+srun: error: c4-91: task 10: Exited with exit code 1
+srun: error: c4-91: tasks 26,54,58,62: Exited with exit code 1
+srun: error: c4-91: tasks 6,76: Exited with exit code 1
+Worker 13 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 11 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 18 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 16 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 43 terminated.
+Worker 31 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 35 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 15 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 54 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 10 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 32 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 73 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 46 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 24 terminated.
+Worker 83 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 14 terminated.
+Worker 55 terminated.
+Worker 66 terminated.
+Worker 53 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 85 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 81 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 6 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 8 terminated.
+Worker 45 terminated.
+Worker 80 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 47 terminated.
+Worker 17 terminated.
+Worker 29 terminated.
+Worker 61 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 42 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 87 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 67 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 63 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 22 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 20 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 62 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 48 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 9 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 57 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 71 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 52 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 64 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 50 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 60 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 79 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 27 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 40 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 59 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 58 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 4 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 84 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 51 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 28 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 82 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 74 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 77 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 65 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 86 terminated.
+srun: error: c4-91: tasks 0-5,7-9,11-22,24-25,27-32,34-45,47-48,50-53,55-57,59-61,63-67,69-75,77,79-85: Exited with exit code 1
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 49 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 75 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 21 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 37 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 19 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 26 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 30 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 76 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 44 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+Worker 78 terminated.
+Worker 12 terminated.
+UNHANDLED TASK ERROR: EOFError: read end of file
+Stacktrace:
+ [1] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+   @ Base ./stream.jl:945
+ [2] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+   @ Base ./stream.jl:953
+ [3] unsafe_read
+   @ ./io.jl:759 [inlined]
+ [4] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+   @ Base ./io.jl:758
+ [5] read!
+   @ ./io.jl:760 [inlined]
+ [6] deserialize_hdr_raw
+   @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+ [7] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+ [8] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+   @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [9] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+   @ Distributed ./task.jl:484
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 38 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 7 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+ERROR: LoadError: Some tests did not pass: 0 passed, 0 failed, 1 errored, 0 broken.
+in expression starting at /home/magerton/dev-pkgs/FARMTest/test/runtests.jl:5
+Worker 33 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 68 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 34 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 70 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 5 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 69 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 36 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 3 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 39 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 25 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 56 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 23 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 72 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+Worker 41 terminated.
+UNHANDLED TASK ERROR: IOError: read: connection reset by peer (ECONNRESET)
+Stacktrace:
+  [1] wait_readnb(x::Sockets.TCPSocket, nb::Int64)
+    @ Base ./stream.jl:410
+  [2] (::Base.var"#wait_locked#680")(s::Sockets.TCPSocket, buf::IOBuffer, nb::Int64)
+    @ Base ./stream.jl:947
+  [3] unsafe_read(s::Sockets.TCPSocket, p::Ptr{UInt8}, nb::UInt64)
+    @ Base ./stream.jl:953
+  [4] unsafe_read
+    @ ./io.jl:759 [inlined]
+  [5] unsafe_read(s::Sockets.TCPSocket, p::Base.RefValue{NTuple{4, Int64}}, n::Int64)
+    @ Base ./io.jl:758
+  [6] read!
+    @ ./io.jl:760 [inlined]
+  [7] deserialize_hdr_raw
+    @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/messages.jl:167 [inlined]
+  [8] message_handler_loop(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:172
+  [9] process_tcp_streams(r_stream::Sockets.TCPSocket, w_stream::Sockets.TCPSocket, incoming::Bool)
+    @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/process_messages.jl:133
+ [10] (::Distributed.var"#103#104"{Sockets.TCPSocket, Sockets.TCPSocket, Bool})()
+    @ Distributed ./task.jl:484
+connecting to worker 1 out of 86
+connecting to worker 2 out of 86
+connecting to worker 3 out of 86
+connecting to worker 4 out of 86
+connecting to worker 5 out of 86
+connecting to worker 6 out of 86
+connecting to worker 7 out of 86
+connecting to worker 8 out of 86
+connecting to worker 9 out of 86
+connecting to worker 10 out of 86
+connecting to worker 11 out of 86
+connecting to worker 12 out of 86
+connecting to worker 13 out of 86
+connecting to worker 14 out of 86
+connecting to worker 15 out of 86
+connecting to worker 16 out of 86
+connecting to worker 17 out of 86
+connecting to worker 18 out of 86
+connecting to worker 19 out of 86
+connecting to worker 20 out of 86
+connecting to worker 21 out of 86
+connecting to worker 22 out of 86
+connecting to worker 23 out of 86
+connecting to worker 24 out of 86
+connecting to worker 25 out of 86
+connecting to worker 26 out of 86
+connecting to worker 27 out of 86
+connecting to worker 28 out of 86
+connecting to worker 29 out of 86
+connecting to worker 30 out of 86
+connecting to worker 31 out of 86
+connecting to worker 32 out of 86
+connecting to worker 33 out of 86
+connecting to worker 34 out of 86
+connecting to worker 35 out of 86
+connecting to worker 36 out of 86
+connecting to worker 37 out of 86
+connecting to worker 38 out of 86
+connecting to worker 39 out of 86
+connecting to worker 40 out of 86
+connecting to worker 41 out of 86
+connecting to worker 42 out of 86
+connecting to worker 43 out of 86
+connecting to worker 44 out of 86
+connecting to worker 45 out of 86
+connecting to worker 46 out of 86
+connecting to worker 47 out of 86
+connecting to worker 48 out of 86
+connecting to worker 49 out of 86
+connecting to worker 50 out of 86
+connecting to worker 51 out of 86
+connecting to worker 52 out of 86
+connecting to worker 53 out of 86
+connecting to worker 54 out of 86
+connecting to worker 55 out of 86
+connecting to worker 56 out of 86
+connecting to worker 57 out of 86
+connecting to worker 58 out of 86
+connecting to worker 59 out of 86
+connecting to worker 60 out of 86
+connecting to worker 61 out of 86
+connecting to worker 62 out of 86
+connecting to worker 63 out of 86
+connecting to worker 64 out of 86
+connecting to worker 65 out of 86
+connecting to worker 66 out of 86
+connecting to worker 67 out of 86
+connecting to worker 68 out of 86
+connecting to worker 69 out of 86
+connecting to worker 70 out of 86
+connecting to worker 71 out of 86
+connecting to worker 72 out of 86
+connecting to worker 73 out of 86
+connecting to worker 74 out of 86
+connecting to worker 75 out of 86
+connecting to worker 76 out of 86
+connecting to worker 77 out of 86
+connecting to worker 78 out of 86
+connecting to worker 79 out of 86
+connecting to worker 80 out of 86
+connecting to worker 81 out of 86
+connecting to worker 82 out of 86
+connecting to worker 83 out of 86
+connecting to worker 84 out of 86
+connecting to worker 85 out of 86
+connecting to worker 86 out of 86
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+Master process (id 1) could not connect within 60.0 seconds.
+exiting.
+FARMTest.jl: Error During Test at /home/magerton/dev-pkgs/FARMTest/test/runtests.jl:5
+  Got exception outside of a @test
+  no process with id 3 exists
+  Stacktrace:
+    [1] error(s::String)
+      @ Base ./error.jl:35
+    [2] worker_from_id(pg::Distributed.ProcessGroup, i::Int64)
+      @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/cluster.jl:1097
+    [3] worker_from_id
+      @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/cluster.jl:1089 [inlined]
+    [4] #remote_do#170
+      @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/remotecall.jl:557 [inlined]
+    [5] remote_do
+      @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/remotecall.jl:557 [inlined]
+    [6] addprocs_locked(manager::SlurmManager; kwargs::Base.Pairs{Symbol, Any, Tuple{Symbol, Symbol}, NamedTuple{(:exeflags, :topology), Tuple{String, Symbol}}})
+      @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/cluster.jl:514
+    [7] addprocs(manager::SlurmManager; kwargs::Base.Pairs{Symbol, Any, Tuple{Symbol, Symbol}, NamedTuple{(:exeflags, :topology), Tuple{String, Symbol}}})
+      @ Distributed /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Distributed/src/cluster.jl:450
+    [8] macro expansion
+      @ ~/dev-pkgs/FARMTest/test/runtests.jl:12 [inlined]
+    [9] macro expansion
+      @ /share/apps/julia-1.8.2/share/julia/stdlib/v1.8/Test/src/Test.jl:1357 [inlined]
+   [10] top-level scope
+      @ ~/dev-pkgs/FARMTest/test/runtests.jl:7
+   [11] include(mod::Module, _path::String)
+      @ Base ./Base.jl:419
+   [12] exec_options(opts::Base.JLOptions)
+      @ Base ./client.jl:303
+   [13] _start()
+      @ Base ./client.jl:522
+Test Summary: | Error  Total     Time
+FARMTest.jl   |     1      1  2m50.5s
+Agent pid 214830 killed
+Name                : Testing_FARMTest_package
+User                : magerton
+Account             : magertongrp
+Partition           : high2
+Nodes               : c4-91
+Cores               : 86
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2022-11-23T21:20:41
+Start               : 2022-11-23T21:25:12
+End                 : 2022-11-23T21:28:34
+Waited              : 00:04:31
+Reserved walltime   : 01:00:00
+Used walltime       : 00:03:22
+Used CPU time       : 00:02:48
+% User (Computation): 75.30%
+% System (I/O)      : 501.55%
+Mem reserved        : 250G
+Max Mem used        : 209.74M (c4-91)
+Max Disk Write      : 204.80K (c4-91)
+Max Disk Read       : 7.45M (c4-91)
