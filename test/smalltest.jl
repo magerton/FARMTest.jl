@@ -9,6 +9,6 @@ for i in workers()
     println("Hello from process $(pid) on host $(host)!")
 end
 
-# hosts = @parallel for i=1:np
-#     println(run(`hostname`))
-# end
+hosts = @distributed for i=1:np
+    println(run(`hostname`))
+end
