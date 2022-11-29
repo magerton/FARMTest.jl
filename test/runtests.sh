@@ -66,3 +66,5 @@ julia --machine-file $HOSTFILE ~/dev-pkgs/FARMTest/test/smalltest.jl
 # run the script
 # julia --project=~/dev-pkgs/FARMTest --optimize=3 ~/dev-pkgs/FARMTest/test/runtests.jl
    # addproc(collect(eachline("~/machinefile")); topology=:master_slave)
+
+rm $HOSTFILE
