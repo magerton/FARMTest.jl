@@ -17,14 +17,8 @@
 #SBATCH --time=0-01:00:00     # in d-hh:mm:ss
 #SBATCH --ntasks=256
 #SBATCH --partition=high2
-#SBATCH --mem=192000
-#SBATCH --nodes=4
-
-# https://researchcomputing.princeton.edu/support/knowledge-base/julia
-
-HOSTFILE=$SLURM_SUBMIT_DIR/hostfile-$SLURM_JOBID
-scontrol show hostname $SLURM_JOB_NODELIST | perl -ne 'chomb; print "$_" x4' > $HOSTFILE
-cat $HOSTFILE
+#SBATCH --mem=384000
+#SBATCH --nodes=2
 
 #-----------------------
 # script
@@ -57,14 +51,10 @@ echo ""
 echo "FARMTest commit " $(git -C ~/dev-pkgs/FARMTest/ rev-parse HEAD)
 # echo "haynesville             commit " $(git -C ~/haynesville/ rev-parse HEAD)
 echo ""
-# print out environment variables
-julia -e '[println((k,ENV[k],)) for k in keys(ENV) if occursin(r"SLURM",k)];'
 
-echo ""
-cat $SLURM_NODEFILE
-echo ""
-# julia --machine-file $HOSTFILE ~/dev-pkgs/FARMTest/test/smalltest.jl
-# julia ~/dev-pkgs/FARMTest/test/smalltest.jl
+# print out environment variables
+# julia -e '[println((k,ENV[k],)) for k in keys(ENV) if occursin(r"SLURM",k)];'
+printenv | grep SLURM
 
 # -------------------------------
 # julia!!
@@ -72,5 +62,3 @@ echo ""
 
 # run the script
 julia --project=~/dev-pkgs/FARMTest --optimize=3 ~/dev-pkgs/FARMTest/test/runtests.jl
-
-rm $HOSTFILE
