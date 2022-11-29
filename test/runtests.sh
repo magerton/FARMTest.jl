@@ -23,11 +23,18 @@
 #SBATCH --ntasks=3
 #SBATCH --partition=high2
 #SBATCH --mem=6000      # max out RAM
-export SLURM_NODEFILE=`generate_pbs_nodefile`
+# export SLURM_NODEFILE=`generate_pbs_nodefile`
 
 ##SBATCH --nodes=1
 
 # https://researchcomputing.princeton.edu/support/knowledge-base/julia
+
+HOSTS=.hosts-job$SLURM_JOB_ID
+HOSTFILE=.hostlist-job$SLURM_JOB_ID
+srun hostname -f > $HOSTS
+sort $HOSTS | uniq -c | awk '{print $2 ":" $1}' >> $HOSTFILE
+
+cat $HOSTFILE
 
 #-----------------------
 # script
@@ -56,8 +63,8 @@ echo ""
 # print out environment variables
 julia -e '[println((k,ENV[k],)) for k in keys(ENV) if occursin(r"SLURM",k)];'
 
-cat $SLURM_NODEFILE
-julia --machinefile $SLURM_NODEFILE ~/dev-pkgs/FARMTest/test/smalltest.jl
+# cat $SLURM_NODEFILE
+# julia --machinefile $SLURM_NODEFILE ~/dev-pkgs/FARMTest/test/smalltest.jl
 
 # run the script
 # julia --project=~/dev-pkgs/FARMTest --optimize=3 ~/dev-pkgs/FARMTest/test/runtests.jl
