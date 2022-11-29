@@ -1,0 +1,608 @@
+==========================================
+SLURM_JOB_ID = 56904715
+SLURM_NODELIST = c4-[87-88]
+==========================================
+Initialising new SSH agent...
+Enter passphrase for /home/magerton/.ssh/id_rsa: 
+c4-87
+Module julia/1.8.2 loaded 
+
+Starting job!!! 56904715 on partition high2
+
+FARMTest commit  e1e74ef7b772f37b986e5ce742180810066f3c44
+
+SLURM_NODEID=0
+SLURM_TASK_PID=243155
+SLURM_PRIO_PROCESS=0
+SLURM_SUBMIT_DIR=/home/magerton/.julia/dev/FARMTest/test
+SLURM_PROCID=0
+SLURM_JOB_GID=1522729
+SLURMD_NODENAME=c4-87
+SLURM_TASKS_PER_NODE=128(x2)
+SLURM_NNODES=2
+SLURM_JOB_NODELIST=c4-[87-88]
+SLURM_CLUSTER_NAME=farm
+SLURM_NODELIST=c4-[87-88]
+SLURM_NTASKS=256
+SLURM_JOB_CPUS_PER_NODE=128(x2)
+SLURM_TOPOLOGY_ADDR=c4-87
+SLURM_WORKING_CLUSTER=farm:192.168.12.90:6817:9728:101
+SLURM_JOB_NAME=Testing_FARMTest_package
+SLURM_JOBID=56904715
+SLURM_CONF=/share/apps/slurm-current/18.04/etc/slurm.conf
+SLURM_NODE_ALIASES=(null)
+SLURM_JOB_QOS=magertongrph2
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SLURM_CPUS_ON_NODE=128
+SLURM_JOB_NUM_NODES=2
+SLURM_MEM_PER_NODE=384000
+SLURM_JOB_UID=1522729
+SLURM_JOB_PARTITION=high2
+SLURM_SCRIPT_CONTEXT=prolog_task
+SLURM_JOB_USER=magerton
+SLURM_NPROCS=256
+SLURM_SUBMIT_HOST=farm.cse.ucdavis.edu
+SLURM_JOB_ACCOUNT=magertongrp
+SLURM_HOME=/share/apps/slurm-22.05.4/18.04
+SLURM_GTIDS=0
+SLURM_JOB_ID=56904715
+SLURM_LOCALID=0
+11:57:56   
+
+slurm addprocs
+hello from 1:c4-87
+hello from 137:c4-87
+hello from 33:c4-87
+hello from 237:c4-87
+hello from 7:c4-87
+hello from 36:c4-87
+hello from 9:c4-87
+hello from 10:c4-87
+hello from 22:c4-87
+hello from 46:c4-87
+hello from 81:c4-87
+hello from 3:c4-88
+hello from 2:c4-88
+hello from 44:c4-87
+hello from 30:c4-88
+hello from 39:c4-88
+hello from 31:c4-88
+hello from 86:c4-87
+hello from 20:c4-87
+hello from 28:c4-87
+hello from 138:c4-87
+hello from 42:c4-87
+hello from 32:c4-87
+hello from 50:c4-87
+hello from 52:c4-87
+hello from 54:c4-87
+hello from 82:c4-87
+hello from 73:c4-87
+hello from 115:c4-87
+hello from 15:c4-87
+hello from 61:c4-87
+hello from 64:c4-87
+hello from 14:c4-87
+hello from 100:c4-87
+hello from 17:c4-87
+hello from 96:c4-87
+hello from 43:c4-87
+hello from 60:c4-87
+hello from 83:c4-87
+hello from 158:c4-87
+hello from 89:c4-87
+hello from 85:c4-87
+hello from 62:c4-87
+hello from 104:c4-87
+hello from 38:c4-87
+hello from 16:c4-87
+hello from 116:c4-87
+hello from 180:c4-87
+hello from 90:c4-87
+hello from 6:c4-88
+hello from 236:c4-87
+hello from 224:c4-87
+hello from 196:c4-87
+hello from 91:c4-87
+hello from 127:c4-87
+hello from 238:c4-87
+hello from 80:c4-87
+hello from 126:c4-87
+hello from 113:c4-87
+hello from 191:c4-87
+hello from 84:c4-87
+hello from 70:c4-87
+hello from 147:c4-87
+hello from 114:c4-87
+hello from 234:c4-87
+hello from 190:c4-87
+hello from 58:c4-87
+hello from 106:c4-87
+hello from 51:c4-87
+hello from 110:c4-87
+hello from 120:c4-87
+hello from 150:c4-87
+hello from 97:c4-87
+hello from 53:c4-87
+hello from 159:c4-87
+hello from 55:c4-87
+hello from 157:c4-87
+hello from 8:c4-87
+hello from 21:c4-87
+hello from 134:c4-87
+hello from 101:c4-87
+hello from 204:c4-87
+hello from 77:c4-87
+hello from 250:c4-87
+hello from 102:c4-87
+hello from 182:c4-87
+hello from 63:c4-87
+hello from 229:c4-87
+hello from 146:c4-87
+hello from 23:c4-87
+hello from 195:c4-87
+hello from 226:c4-87
+hello from 99:c4-87
+hello from 178:c4-87
+hello from 209:c4-87
+hello from 151:c4-88
+hello from 48:c4-87
+hello from 181:c4-87
+hello from 111:c4-87
+hello from 213:c4-87
+hello from 112:c4-87
+hello from 183:c4-87
+hello from 75:c4-87
+hello from 5:c4-88
+hello from 212:c4-87
+hello from 221:c4-87
+hello from 74:c4-87
+hello from 128:c4-87
+hello from 129:c4-87
+hello from 193:c4-87
+hello from 130:c4-87
+hello from 98:c4-87
+hello from 72:c4-87
+hello from 4:c4-88
+hello from 79:c4-87
+hello from 108:c4-87
+hello from 11:c4-88
+hello from 13:c4-88
+hello from 203:c4-87
+hello from 220:c4-87
+hello from 47:c4-87
+hello from 219:c4-87
+hello from 216:c4-87
+hello from 119:c4-87
+hello from 88:c4-87
+hello from 227:c4-87
+hello from 76:c4-87
+hello from 149:c4-87
+hello from 173:c4-87
+hello from 198:c4-87
+hello from 172:c4-87
+hello from 214:c4-87
+hello from 232:c4-87
+hello from 184:c4-87
+hello from 107:c4-87
+hello from 162:c4-87
+hello from 194:c4-87
+hello from 240:c4-87
+hello from 139:c4-88
+hello from 179:c4-88
+hello from 124:c4-88
+hello from 40:c4-88
+hello from 49:c4-88
+hello from 57:c4-88
+hello from 109:c4-88
+hello from 65:c4-88
+hello from 95:c4-88
+hello from 93:c4-88
+hello from 26:c4-88
+hello from 148:c4-88
+hello from 218:c4-88
+hello from 142:c4-88
+hello from 18:c4-88
+hello from 78:c4-88
+hello from 71:c4-88
+hello from 59:c4-88
+hello from 69:c4-88
+hello from 27:c4-88
+hello from 105:c4-88
+hello from 12:c4-88
+hello from 19:c4-88
+hello from 87:c4-88
+hello from 168:c4-88
+hello from 118:c4-88
+hello from 25:c4-88
+hello from 222:c4-88
+hello from 141:c4-88
+hello from 165:c4-88
+hello from 103:c4-88
+hello from 161:c4-88
+hello from 169:c4-88
+hello from 94:c4-88
+hello from 242:c4-87
+hello from 239:c4-87
+hello from 29:c4-88
+hello from 37:c4-88
+hello from 122:c4-88
+hello from 199:c4-88
+hello from 185:c4-88
+hello from 217:c4-88
+hello from 230:c4-88
+hello from 174:c4-88
+hello from 123:c4-88
+hello from 244:c4-88
+hello from 34:c4-88
+hello from 225:c4-88
+hello from 68:c4-88
+hello from 166:c4-88
+hello from 152:c4-88
+hello from 206:c4-88
+hello from 189:c4-88
+hello from 200:c4-88
+hello from 233:c4-88
+hello from 140:c4-88
+hello from 24:c4-88
+hello from 35:c4-88
+hello from 67:c4-88
+hello from 66:c4-88
+hello from 163:c4-88
+hello from 133:c4-88
+hello from 125:c4-88
+hello from 121:c4-88
+hello from 135:c4-88
+hello from 175:c4-88
+hello from 171:c4-88
+hello from 215:c4-88
+hello from 131:c4-88
+hello from 144:c4-88
+hello from 170:c4-88
+hello from 201:c4-88
+hello from 132:c4-88
+hello from 117:c4-88
+hello from 192:c4-88
+hello from 154:c4-88
+hello from 143:c4-88
+hello from 254:c4-88
+hello from 176:c4-88
+hello from 92:c4-88
+hello from 207:c4-88
+hello from 45:c4-88
+hello from 241:c4-88
+hello from 247:c4-88
+hello from 186:c4-88
+hello from 253:c4-88
+hello from 255:c4-88
+hello from 155:c4-88
+hello from 235:c4-88
+hello from 228:c4-88
+hello from 187:c4-88
+hello from 41:c4-88
+hello from 136:c4-88
+hello from 211:c4-88
+hello from 202:c4-88
+hello from 197:c4-88
+hello from 156:c4-88
+hello from 243:c4-88
+hello from 249:c4-88
+hello from 177:c4-88
+hello from 251:c4-88
+hello from 210:c4-88
+hello from 223:c4-88
+hello from 56:c4-88
+hello from 145:c4-88
+hello from 188:c4-88
+hello from 153:c4-88
+hello from 167:c4-88
+hello from 256:c4-88
+hello from 245:c4-88
+hello from 231:c4-88
+hello from 257:c4-88
+hello from 208:c4-88
+hello from 252:c4-88
+hello from 246:c4-88
+hello from 164:c4-88
+hello from 205:c4-88
+hello from 248:c4-88
+hello from 160:c4-88
+11:58:08   removing procs [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257]
+
+
+11:58:08   
+
+startup workers
+11:58:08   removing workers Int64[]
+11:58:08   requesting 256 cpus from slurm.
+srun: Job 56904715 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Step created for job 56904715
+11:58:19   Workers added: [258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513]
+hello from 1:c4-87
+hello from 338:c4-87
+hello from 418:c4-87
+hello from 317:c4-87
+hello from 300:c4-87
+hello from 299:c4-87
+hello from 441:c4-87
+hello from 415:c4-87
+hello from 339:c4-87
+hello from 352:c4-88
+hello from 495:c4-87
+hello from 417:c4-87
+hello from 475:c4-87
+hello from 318:c4-87
+hello from 501:c4-87
+hello from 400:c4-87
+hello from 454:c4-87
+hello from 453:c4-87
+hello from 323:c4-88
+hello from 345:c4-87
+hello from 271:c4-88
+hello from 443:c4-87
+hello from 483:c4-87
+hello from 471:c4-87
+hello from 336:c4-87
+hello from 337:c4-87
+hello from 436:c4-87
+hello from 440:c4-87
+hello from 376:c4-87
+hello from 390:c4-87
+hello from 439:c4-87
+hello from 445:c4-87
+hello from 444:c4-87
+hello from 293:c4-87
+hello from 350:c4-88
+hello from 344:c4-88
+hello from 320:c4-87
+hello from 319:c4-87
+hello from 450:c4-87
+hello from 473:c4-87
+hello from 359:c4-87
+hello from 485:c4-87
+hello from 499:c4-87
+hello from 330:c4-87
+hello from 458:c4-87
+hello from 361:c4-87
+hello from 486:c4-87
+hello from 397:c4-87
+hello from 302:c4-87
+hello from 478:c4-87
+hello from 334:c4-88
+hello from 347:c4-88
+hello from 491:c4-87
+hello from 474:c4-87
+hello from 460:c4-87
+hello from 494:c4-87
+hello from 276:c4-88
+hello from 428:c4-87
+hello from 416:c4-87
+hello from 408:c4-87
+hello from 419:c4-87
+hello from 375:c4-87
+hello from 377:c4-87
+hello from 273:c4-87
+hello from 391:c4-87
+hello from 277:c4-87
+hello from 492:c4-87
+hello from 328:c4-88
+hello from 333:c4-88
+hello from 497:c4-87
+hello from 470:c4-87
+hello from 365:c4-88
+hello from 488:c4-87
+hello from 297:c4-88
+hello from 500:c4-87
+hello from 412:c4-87
+hello from 355:c4-88
+hello from 448:c4-87
+hello from 496:c4-87
+hello from 509:c4-87
+hello from 346:c4-87
+hello from 360:c4-87
+hello from 502:c4-87
+hello from 479:c4-87
+hello from 484:c4-87
+hello from 446:c4-87
+hello from 396:c4-87
+hello from 506:c4-87
+hello from 512:c4-87
+hello from 507:c4-87
+hello from 378:c4-87
+hello from 508:c4-87
+hello from 481:c4-87
+hello from 457:c4-87
+hello from 429:c4-87
+hello from 380:c4-87
+hello from 476:c4-87
+hello from 426:c4-87
+hello from 455:c4-87
+hello from 409:c4-87
+hello from 388:c4-87
+hello from 442:c4-87
+hello from 510:c4-87
+hello from 472:c4-87
+hello from 411:c4-87
+hello from 413:c4-87
+hello from 461:c4-87
+hello from 513:c4-87
+hello from 465:c4-87
+hello from 379:c4-87
+hello from 459:c4-87
+hello from 456:c4-87
+hello from 399:c4-87
+hello from 401:c4-87
+hello from 427:c4-88
+hello from 384:c4-88
+hello from 394:c4-88
+hello from 423:c4-87
+hello from 425:c4-87
+hello from 493:c4-87
+hello from 480:c4-87
+hello from 404:c4-88
+hello from 369:c4-88
+hello from 341:c4-87
+hello from 424:c4-87
+hello from 451:c4-87
+hello from 389:c4-87
+hello from 340:c4-87
+hello from 462:c4-87
+hello from 504:c4-87
+hello from 463:c4-87
+hello from 464:c4-87
+hello from 438:c4-87
+hello from 482:c4-87
+hello from 505:c4-87
+hello from 469:c4-87
+hello from 405:c4-88
+hello from 260:c4-88
+hello from 490:c4-88
+hello from 435:c4-88
+hello from 275:c4-88
+hello from 406:c4-88
+hello from 315:c4-88
+hello from 449:c4-88
+hello from 295:c4-88
+hello from 285:c4-88
+hello from 288:c4-88
+hello from 354:c4-88
+hello from 282:c4-88
+hello from 437:c4-87
+hello from 410:c4-87
+hello from 498:c4-87
+hello from 511:c4-87
+hello from 447:c4-87
+hello from 466:c4-87
+hello from 353:c4-88
+hello from 265:c4-88
+hello from 274:c4-88
+hello from 324:c4-88
+hello from 262:c4-88
+hello from 392:c4-88
+hello from 321:c4-87
+hello from 284:c4-88
+hello from 307:c4-88
+hello from 289:c4-88
+hello from 292:c4-88
+hello from 264:c4-88
+hello from 372:c4-88
+hello from 363:c4-88
+hello from 298:c4-88
+hello from 263:c4-88
+hello from 433:c4-88
+hello from 278:c4-88
+hello from 331:c4-88
+hello from 326:c4-88
+hello from 358:c4-88
+hello from 291:c4-88
+hello from 434:c4-88
+hello from 348:c4-88
+hello from 261:c4-88
+hello from 356:c4-88
+hello from 303:c4-87
+hello from 468:c4-88
+hello from 393:c4-88
+hello from 301:c4-88
+hello from 258:c4-88
+hello from 349:c4-88
+hello from 351:c4-88
+hello from 266:c4-88
+hello from 373:c4-88
+hello from 259:c4-88
+hello from 362:c4-87
+hello from 503:c4-87
+hello from 269:c4-87
+hello from 383:c4-88
+hello from 487:c4-88
+hello from 268:c4-88
+hello from 283:c4-88
+hello from 343:c4-88
+hello from 398:c4-88
+hello from 382:c4-88
+hello from 281:c4-88
+hello from 467:c4-88
+hello from 286:c4-88
+hello from 431:c4-88
+hello from 329:c4-88
+hello from 364:c4-88
+hello from 280:c4-88
+hello from 430:c4-88
+hello from 402:c4-88
+hello from 370:c4-88
+hello from 432:c4-88
+hello from 308:c4-88
+hello from 452:c4-88
+hello from 270:c4-88
+hello from 342:c4-88
+hello from 421:c4-88
+hello from 477:c4-88
+hello from 386:c4-88
+hello from 381:c4-88
+hello from 357:c4-88
+hello from 422:c4-88
+hello from 313:c4-88
+hello from 374:c4-88
+hello from 279:c4-88
+hello from 311:c4-88
+hello from 489:c4-88
+hello from 332:c4-88
+hello from 296:c4-88
+hello from 420:c4-88
+hello from 371:c4-88
+hello from 335:c4-88
+hello from 272:c4-88
+hello from 305:c4-88
+hello from 385:c4-88
+hello from 304:c4-88
+hello from 294:c4-88
+hello from 287:c4-88
+hello from 267:c4-88
+hello from 327:c4-88
+hello from 367:c4-88
+hello from 407:c4-88
+hello from 387:c4-88
+hello from 314:c4-88
+hello from 309:c4-88
+hello from 316:c4-88
+hello from 366:c4-88
+hello from 290:c4-88
+hello from 310:c4-88
+hello from 325:c4-88
+hello from 306:c4-88
+hello from 368:c4-88
+hello from 312:c4-88
+hello from 403:c4-88
+hello from 322:c4-88
+hello from 414:c4-88
+hello from 395:c4-88
+11:58:21   removing procs [258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513]
+11:58:21   
+
+done!
+
+
+Test Summary: | Time
+FARMTest.jl   | None  24.9s
+Agent pid 243211 killed
+Name                : Testing_FARMTest_package
+User                : magerton
+Account             : magertongrp
+Partition           : high2
+Nodes               : c4-[87-88]
+Cores               : 256
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2022-11-29T11:57:55
+Start               : 2022-11-29T11:57:55
+End                 : 2022-11-29T11:58:24
+Waited              : 00:00:00
+Reserved walltime   : 01:00:00
+Used walltime       : 00:00:29
+Used CPU time       : 00:35:09
+% User (Computation): 164.60%
+% System (I/O)      : 36.20%
+Mem reserved        : 750G
+Max Mem used        : 159.53M (c4-87)
+Max Disk Write      : 225.28K (c4-87,c4-88)
+Max Disk Read       : 143.36K (c4-87,c4-88)
