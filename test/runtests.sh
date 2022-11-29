@@ -10,11 +10,6 @@
 #SBATCH --mail-user=mjagerton@ucdavis.edu
 #SBATCH --mail-type=ALL
 
-# NOT USED
-# --------------
-##SBATCH --output out-%j.output
-##SBATCH --error  out-%j.output
-
 #-----------------------
 # Resource allocation
 #-----------------------
@@ -22,10 +17,8 @@
 #SBATCH --time=0-01:00:00     # in d-hh:mm:ss
 #SBATCH --ntasks=3
 #SBATCH --partition=high2
-#SBATCH --mem=6000      # max out RAM
-# export SLURM_NODEFILE=`generate_pbs_nodefile`
-
-##SBATCH --nodes=1
+#SBATCH --mem=6000
+#SBATCH --nodes=2
 
 # https://researchcomputing.princeton.edu/support/knowledge-base/julia
 
@@ -41,15 +34,22 @@ echo ""
 hostname
 module load julia
 
+# -------------------------------
 # create directory for the month
-echo ""
-MON=$(date +"%Y-%m")
-[ -d $MON ] &&  echo "Directory ${MON} exists" || mkdir $MON
+# -------------------------------
 
+# echo ""
+# MON=$(date +"%Y-%m")
+# [ -d $MON ] &&  echo "Directory ${MON} exists" || mkdir $MON
 # switch into directory
-mkdir ${MON}/${SLURM_JOB_ID}
-cd    ${MON}/${SLURM_JOB_ID}
-pwd
+# mkdir ${MON}/${SLURM_JOB_ID}
+# cd    ${MON}/${SLURM_JOB_ID}
+# pwd
+
+# -------------------------------
+# some info
+# -------------------------------
+
 echo ""
 echo "Starting job!!! ${SLURM_JOB_ID} on partition ${SLURM_JOB_PARTITION}"
 echo ""
@@ -60,12 +60,17 @@ echo ""
 # print out environment variables
 julia -e '[println((k,ENV[k],)) for k in keys(ENV) if occursin(r"SLURM",k)];'
 
-# cat $SLURM_NODEFILE
+echo ""
+cat $SLURM_NODEFILE
+echo ""
 # julia --machine-file $HOSTFILE ~/dev-pkgs/FARMTest/test/smalltest.jl
-julia ~/dev-pkgs/FARMTest/test/smalltest.jl
+# julia ~/dev-pkgs/FARMTest/test/smalltest.jl
+
+# -------------------------------
+# julia!!
+# -------------------------------
 
 # run the script
-# julia --project=~/dev-pkgs/FARMTest --optimize=3 ~/dev-pkgs/FARMTest/test/runtests.jl
-   # addproc(collect(eachline("~/machinefile")); topology=:master_slave)
+julia --project=~/dev-pkgs/FARMTest --optimize=3 ~/dev-pkgs/FARMTest/test/runtests.jl
 
 rm $HOSTFILE

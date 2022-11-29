@@ -4,6 +4,8 @@ using Distributed, SlurmClusterManager, Dates
 
 export println_time_flush
 
+VERBOSE = false
+
 "workers() but excluding master"
 getworkers() = filter(i -> i != 1, workers())
 
@@ -17,7 +19,7 @@ function start_up_workers(ENV::Base.EnvDict; nprocs = Sys.CPU_THREADS)
     if "SLURM_JOBID" in keys(ENV)
         num_cpus_to_request = parse(Int, ENV["SLURM_NTASKS"])
         println_time_flush("requesting $(num_cpus_to_request) cpus from slurm.")
-        pids = addprocs(SlurmManager(; verbose=true); exeflags = "--project=$(Base.active_project())", topology=:master_worker)
+        pids = addprocs(SlurmManager(; verbose=VERBOSE); exeflags = "--project=$(Base.active_project())", topology=:master_worker)
     else
         cputhrds = Sys.CPU_THREADS
         cputhrds < nprocs && @warn "using nprocs = $cputhrds < $nprocs specified"
