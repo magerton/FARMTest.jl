@@ -7,7 +7,7 @@
 #-----------------------
 
 #SBATCH --job-name=Testing_FARMTest_package
-#SBATCH --mail-user=mjagerton@ucdavis.edu
+#SBATCH --mail-user=User@example.edu
 #SBATCH --mail-type=ALL
 
 #-----------------------
@@ -29,7 +29,10 @@ hostname
 module load julia
 
 # -------------------------------
-# create directory for the month
+# create directory for the year-month 
+# to save data/results to
+# (note, SLURM output saved to the directory from which the job was submitted)
+# commented out for now
 # -------------------------------
 
 # echo ""
@@ -49,11 +52,9 @@ echo "Starting job!!! ${SLURM_JOB_ID} on partition ${SLURM_JOB_PARTITION}"
 echo ""
 # print out versions of repos
 echo "FARMTest commit " $(git -C ~/dev-pkgs/FARMTest/ rev-parse HEAD)
-# echo "haynesville             commit " $(git -C ~/haynesville/ rev-parse HEAD)
 echo ""
 
 # print out environment variables
-# julia -e '[println((k,ENV[k],)) for k in keys(ENV) if occursin(r"SLURM",k)];'
 printenv | grep SLURM
 
 # -------------------------------
@@ -61,4 +62,5 @@ printenv | grep SLURM
 # -------------------------------
 
 # run the script
+# NOTE - may need to change directory here
 julia --project=~/dev-pkgs/FARMTest --optimize=3 ~/dev-pkgs/FARMTest/test/runtests.jl
